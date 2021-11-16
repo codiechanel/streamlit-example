@@ -27,4 +27,4 @@ fig_bar.update_layout(margin=dict(t=70, b=0, l=70, r=40),
                                   y=1.02, xanchor="right", x=1)
                       )
 
-st.plotly_chart(fig_bar)
+# st.plotly_chart(fig_bar)
