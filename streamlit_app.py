@@ -7,6 +7,8 @@ df = px.data.gapminder().query("year==2007")
 # df.head()
 
 # fig = px.histogram(df, x="lifeExp", color="continent", hover_name="country")
-fig = px.choropleth(df, color="lifeExp",
-                    locations="iso_alpha", hover_name="country")
+# fig = px.choropleth(df, color="lifeExp",
+#                     locations="iso_alpha", hover_name="country")
+fig = px.sunburst(df, color="lifeExp", values="pop", path=[
+                  "continent", "country"], hover_name="country")
 st.plotly_chart(fig)
